@@ -6,8 +6,7 @@ class CouponType(models.Model):
     """
     code = models.CharField(max_length=30, unique=True)
     name = models.CharField(max_length=100, unique=True)
-    description = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -26,8 +25,9 @@ class Coupon(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     usage_limit = models.PositiveIntegerField(default=1)
-    valid_from = models.DateTimeField(auto_now=True)
-    valid_to = models.DateTimeField(auto_now=True, help_text="End date for the coupon validity")
+    valid_from = models.DateTimeField(blank=True, null=True, help_text="Start date for the coupon validity")
+    valid_to = models.DateTimeField(blank=True, null=True, help_text="End date for the coupon validity")
+    max_dicount_value = models.DecimalField(max_digits=10, decimal_places=2, default=0, help_text="Maximum discount value for the coupon")
 
     def __str__(self):
         return f"{self.code} - {self.coupon_type.name}"
