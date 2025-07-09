@@ -18,4 +18,4 @@ local_settings.py
 .vscode/
 .idea/
 .DS_Store
-
+.direnv/
