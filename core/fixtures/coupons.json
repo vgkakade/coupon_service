@@ -1,0 +1,87 @@
+[
+  {
+    "model": "core.coupon",
+    "pk": 1,
+    "fields": {
+      "code": "WELCOME20",
+      "coupon_type": 2,
+      "discount_value": "20.00",
+      "is_active": true,
+      "min_cart_value": "500.00",
+      "created_at": "2025-07-11T02:13:08.977Z",
+      "updated_at": "2025-07-11T02:13:08.977Z",
+      "usage_limit": 1,
+      "valid_from": "2025-07-11T02:12:50Z",
+      "valid_to": null,
+      "max_discount_value": "2500.00"
+    }
+  },
+  {
+    "model": "core.coupon",
+    "pk": 2,
+    "fields": {
+      "code": "FLAT100",
+      "coupon_type": 1,
+      "discount_value": "1000.00",
+      "is_active": true,
+      "min_cart_value": "500.00",
+      "created_at": "2025-07-11T02:18:57.355Z",
+      "updated_at": "2025-07-11T02:18:57.355Z",
+      "usage_limit": 1,
+      "valid_from": "2025-07-11T02:17:44Z",
+      "valid_to": null,
+      "max_discount_value": "100.00"
+    }
+  },
+  {
+    "model": "core.coupon",
+    "pk": 3,
+    "fields": {
+      "code": "CASHBACK200",
+      "coupon_type": 3,
+      "discount_value": "200.00",
+      "is_active": true,
+      "min_cart_value": "1500.00",
+      "created_at": "2025-07-11T02:28:28.298Z",
+      "updated_at": "2025-07-11T02:28:28.298Z",
+      "usage_limit": 1,
+      "valid_from": "2025-07-11T02:28:00Z",
+      "valid_to": "2025-12-31T00:00:00Z",
+      "max_discount_value": "200.00"
+    }
+  },
+  {
+    "model": "core.coupon",
+    "pk": 4,
+    "fields": {
+      "code": "FREESHIP",
+      "coupon_type": 4,
+      "discount_value": "0.00",
+      "is_active": true,
+      "min_cart_value": "500.00",
+      "created_at": "2025-07-11T02:30:40.772Z",
+      "updated_at": "2025-07-11T02:30:40.772Z",
+      "usage_limit": 1,
+      "valid_from": "2025-07-11T02:30:23Z",
+      "valid_to": "2025-09-18T02:30:28Z",
+      "max_discount_value": "0.00"
+    }
+  },
+  {
+    "model": "core.coupon",
+    "pk": 5,
+    "fields": {
+      "code": "PERCENT20",
+      "coupon_type": 2,
+      "discount_value": "20.00",
+      "is_active": true,
+      "min_cart_value": "2000.00",
+      "created_at": "2025-07-11T02:31:25.706Z",
+      "updated_at": "2025-07-11T02:31:25.706Z",
+      "usage_limit": 1,
+      "valid_from": "2025-07-11T02:31:18Z",
+      "valid_to": null,
+      "max_discount_value": "800.00"
+    }
+  }
+]
