@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CouponType, Coupon, CouponRedemption
+from .models import CouponType, Coupon, CouponRedemption, CouponAssignment
 
 
 @admin.register(Coupon)
@@ -32,3 +32,9 @@ class CouponRedemptionAdmin(admin.ModelAdmin):
     search_fields = ("coupon__code", "user_id", "order_id")
     list_filter = ("is_active",)
     raw_id_fields = ("coupon",)
+
+
+@admin.register(CouponAssignment)
+class CouponAssigmentAdmin(admin.ModelAdmin):
+    list_display = ["coupon", "user_id", "assigned_at", "is_active"]
+    search_fields = ("coupon", "user_id", "is_active")

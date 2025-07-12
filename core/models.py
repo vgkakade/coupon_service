@@ -42,7 +42,7 @@ class Coupon(models.Model):
     )
 
     def __str__(self):
-        return f"{self.code} - {self.coupon_type.name}"
+        return f"{self.code}"
 
 
 class CouponRedemption(models.Model):
@@ -70,3 +70,20 @@ class CouponRedemption(models.Model):
 
     def __str__(self):
         return f"{self.user.username} redeemed {self.coupon.code} on {self.redeemed_at}"
+
+
+class CouponAssignment(models.Model):
+    coupon = models.ForeignKey(
+        Coupon, on_delete=models.CASCADE, related_name="coupon_assignment"
+    )
+    user_id = models.CharField(
+        max_length=50, help_text="User Id to whom coupon is assigned"
+    )
+    assigned_at = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = ("coupon", "user_id")
+
+    def __str__(self):
+        return f"Coupon {self.coupon.code} assigned to User {self.user_id}"
