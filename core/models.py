@@ -76,8 +76,8 @@ class CouponAssignment(models.Model):
     coupon = models.ForeignKey(
         Coupon, on_delete=models.CASCADE, related_name="coupon_assignment"
     )
-    user_id = models.CharField(
-        max_length=50, help_text="User Id to whom coupon is assigned"
+    user_id = models.IntegerField(
+        help_text="User ID to whom the coupon is assigned"
     )
     assigned_at = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
