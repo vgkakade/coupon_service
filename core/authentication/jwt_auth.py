@@ -12,5 +12,5 @@ class CustomJWTAuthentication(JWTAuthentication):
     def get_user(self, validated_token):
         user_id = validated_token.get("user_id")
         if not user_id:
-            return AnonymousUser
+            return AnonymousUser()
         return SimpleUser(user_id)
